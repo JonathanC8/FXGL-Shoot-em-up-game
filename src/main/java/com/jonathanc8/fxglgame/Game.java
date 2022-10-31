@@ -64,21 +64,28 @@ public class Game extends GameApplication {
     }
 
     protected void startLevel(){
-        spawn("enemy", new SpawnData(100, 300));
-        spawn("enemy", new SpawnData(300, 300));
-        spawn("enemy", new SpawnData(500, 300));
+        spawn("enemy", new SpawnData(100, 200));
+        spawn("enemy", new SpawnData(300, 150));
+        spawn("enemy", new SpawnData(500, 200));
 
-        spawn("enemy", new SpawnData(500, -200));
-        spawn("enemy", new SpawnData(500, -300));
-        spawn("enemy", new SpawnData(500, -400));
+        spawn("enemy", new SpawnData(450, -50));
+        spawn("enemy", new SpawnData(400, -200));
+        spawn("enemy", new SpawnData(450, -350));
+        spawn("enemy", new SpawnData(400, -500));
 
-        spawn("enemy", new SpawnData(100, -200));
-        spawn("enemy", new SpawnData(300, -200));
-        spawn("enemy", new SpawnData(500, -200));
+        spawn("enemy", new SpawnData(100, -550));
+        spawn("enemy", new SpawnData(200, -300));
 
-        spawn("enemy", new SpawnData(100, -200));
-        spawn("enemy", new SpawnData(300, -200));
-        spawn("enemy", new SpawnData(500, -200));
+        spawn("enemy", new SpawnData(100, -900));
+        spawn("enemy", new SpawnData(300, -950));
+        spawn("enemy", new SpawnData(500, -900));
+
+        spawn("enemy", new SpawnData(200, -1100));
+        spawn("enemy", new SpawnData(400, -1100));
+
+        spawn("enemy", new SpawnData(100, -1200));
+        spawn("enemy", new SpawnData(300, -1250));
+        spawn("enemy", new SpawnData(500, -1200));
 
     }
 
@@ -175,25 +182,42 @@ public class Game extends GameApplication {
 
     private Vec2 dir = new Vec2(0 ,0);
     private double increment = 0;
-
+    private double speed = -2;
     @Override
     protected void onUpdate(double tpf){
-        increment -= 0.5;
+        increment += speed;
         //player.translate(dir);
         if(getGameWorld().getEntitiesByType(Entities.ENEMY).size() < 3){
 
         }
-        player.translateY(-0.3);
+        player.translateY(speed);
         viewport.setY(increment);
+        if(viewport.getY() < -1600){
+            player.setY(500);
+            increment = 0;
+            getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
+            startLevel();
+        }
 
     }
 
+    private int score = 0;
     @Override
     protected void initPhysics(){
 
         onCollision(Entities.PLAYER, Entities.BULLET, (player, bullet) -> {
             System.out.println("PLAYER HAS BEEN SHOT");
             player.removeFromWorld();
+            getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
+        });
+
+        onCollision(Entities.PLAYER, Entities.ENEMY, (player, enemy) -> {
+            player.setY(500);
+            increment = 0;
+            getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
+            startLevel();
+            inc("score", -score);
+            score = 0;
         });
 
         onCollision(Entities.ENEMY, Entities.BULLET, (enemy, bullet) -> {
@@ -201,6 +225,7 @@ public class Game extends GameApplication {
             enemy.removeFromWorld();
             bullet.removeFromWorld();
             inc("score", 1);
+            score++;
         });
 
 
