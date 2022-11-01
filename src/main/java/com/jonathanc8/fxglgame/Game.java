@@ -3,59 +3,47 @@ package com.jonathanc8.fxglgame;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.app.scene.Viewport;
-import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.dsl.FXGL;
-import com.almasb.fxgl.dsl.views.ScrollingBackgroundView;
+import com.almasb.fxgl.dsl.components.ProjectileComponent;
 import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
-import com.almasb.fxgl.physics.BoundingShape;
-import com.almasb.fxgl.physics.HitBox;
-import com.almasb.fxgl.physics.PhysicsComponent;
-import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
-import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
-import com.almasb.fxgl.texture.Texture;
 import javafx.geometry.Point2D;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 
 public class Game extends GameApplication {
-
-    private enum Type{
-        PLAYER, ENEMY
-    }
     private Entity player;
+    private Entity player2;
     private Entity enemy;
     private Entity bullet;
     private Viewport viewport;
+    private double increment = 500;
+    private double speed = -2;
+    private int moveSpeed = 5;
+    private boolean isPlayer2 = false;
 
 
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(600);
-        settings.setHeight(600);
+        settings.setWidth(1600);
+        settings.setHeight(900);
         settings.setVersion("0.01");
         settings.setTitle("Some Shmup game");
-
-
     }
 
     @Override
     protected void initGame(){
         getGameWorld().addEntityFactory(new ShmupFactory());
-        entityBuilder().at(0, 600).view("Untitled.png").rotate(-90).buildAndAttach();
+        entityBuilder().at(500, 600).view("Untitled.png").rotate(-90).buildAndAttach();
 
-        player = spawn("player");
+        player = spawn("player", new SpawnData().put("color", Color.BLUE));
 
         viewport = getGameScene().getViewport();
 
@@ -64,28 +52,35 @@ public class Game extends GameApplication {
     }
 
     protected void startLevel(){
-        spawn("enemy", new SpawnData(100, 200));
-        spawn("enemy", new SpawnData(300, 150));
-        spawn("enemy", new SpawnData(500, 200));
+        if(!player.isActive())
+            player = spawn("player", new SpawnData().put("color", Color.BLUE));
+        if(isPlayer2)
+            if(!player2.isActive()){
+                player2 = spawn("player", new SpawnData(player.getCenter().getX()+100, player.getCenter().getY()).put("color", Color.PINK));
+            }
 
-        spawn("enemy", new SpawnData(450, -50));
-        spawn("enemy", new SpawnData(400, -200));
-        spawn("enemy", new SpawnData(450, -350));
-        spawn("enemy", new SpawnData(400, -500));
+        spawn("enemy", new SpawnData(600, 200));
+        spawn("enemy", new SpawnData(800, 150));
+        spawn("enemy", new SpawnData(1000, 200));
 
-        spawn("enemy", new SpawnData(100, -550));
-        spawn("enemy", new SpawnData(200, -300));
+        spawn("enemy", new SpawnData(950, -50));
+        spawn("enemy", new SpawnData(900, -200));
+        spawn("enemy", new SpawnData(950, -350));
+        spawn("enemy", new SpawnData(900, -500));
 
-        spawn("enemy", new SpawnData(100, -900));
-        spawn("enemy", new SpawnData(300, -950));
-        spawn("enemy", new SpawnData(500, -900));
+        spawn("enemy", new SpawnData(600, -550));
+        spawn("enemy", new SpawnData(800, -300));
 
-        spawn("enemy", new SpawnData(200, -1100));
-        spawn("enemy", new SpawnData(400, -1100));
+        spawn("enemy", new SpawnData(600, -900));
+        spawn("enemy", new SpawnData(700, -950));
+        spawn("enemy", new SpawnData(1000, -900));
 
-        spawn("enemy", new SpawnData(100, -1200));
-        spawn("enemy", new SpawnData(300, -1250));
-        spawn("enemy", new SpawnData(500, -1200));
+        spawn("enemy", new SpawnData(700, -1100));
+        spawn("enemy", new SpawnData(900, -1100));
+
+        spawn("enemy", new SpawnData(600, -1200));
+        spawn("enemy", new SpawnData(800, -1250));
+        spawn("enemy", new SpawnData(1000, -1200));
 
     }
 
@@ -119,49 +114,47 @@ public class Game extends GameApplication {
             @Override
             protected void onAction(){
                 player.translateY(-5);
-                /*
-                if(tVelocity > 50 || tVelocity < -50){
-
-                }
-                dir.x += Vec2.fromAngle(player.getRotation() - 90).mulLocal(mul).x;
-                dir.y += Vec2.fromAngle(player.getRotation() - 90).mulLocal(mul).y;
-                tVelocity = Math.sqrt(dir.x*dir.x +dir.y*dir.y);
-                inc("velocityX", (int)dir.x);
-                inc("velocityY", (int)dir.y);
-                 */
             }
         }, KeyCode.W);
 
-        input.addAction(new UserAction("Respawn") {
-            @Override
-            protected void onAction(){
-                if(!player.isActive())
-                    player = spawn("player");
+        onKeyDown(KeyCode.ENTER, () -> {
+            if(!isPlayer2){
+                player2 = spawn("player", new SpawnData(player.getCenter().getX()+200, player.getCenter().getY()).put("color", Color.PINK));
+                isPlayer2 = true;
             }
-        }, KeyCode.ENTER);
-
-
-        onKeyDown(KeyCode.SPACE, () -> {
-            spawn("bullet", new SpawnData(player.getCenter().getX(), player.getCenter().getY()-25).put("dir",
-                    new Point2D(0,-10)).put("side", Entities.BULLET));
         });
-        //Easy way to add movement.
-        /*
-        FXGL.onKey(KeyCode.RIGHT, () -> {
-            Enemy.translateX(5); // move right 5 pixels
-         });
 
-        FXGL.onKey(KeyCode.LEFT, () -> {
-            Enemy.translateX(-5); // move left 5 pixels
+        onKey(KeyCode.RIGHT, () -> {
+            if(isPlayer2)
+                player2.translateX(moveSpeed);
         });
-        */
+
+        onKey(KeyCode.LEFT, () -> {
+            if(isPlayer2)
+                player2.translateX(-moveSpeed);
+        });
 
         onKey(KeyCode.UP, () -> {
-
+            if(isPlayer2)
+                player2.translateY(-moveSpeed);
         });
 
         onKey(KeyCode.DOWN, () -> {
+            if(isPlayer2)
+                player2.translateY(moveSpeed);
+        });
 
+        onKeyDown(KeyCode.DELETE, () -> {
+            if(isPlayer2 && player2.isActive())
+                spawn("bullet", new SpawnData(player2.getCenter().getX(), player2.getCenter().getY()-25).put("dir",
+                    new Point2D(0,-10)).put("side", 0));
+        });
+
+
+        onKeyDown(KeyCode.SPACE, () -> {
+            if(player.isActive())
+                spawn("bullet", new SpawnData(player.getCenter().getX(), player.getCenter().getY()-25).put("dir",
+                        new Point2D(0,-10)).put("side", 0));
         });
 
         onKeyDown(KeyCode.E, () -> {
@@ -180,21 +173,18 @@ public class Game extends GameApplication {
         getGameScene().addUINode(score);
     }
 
-    private Vec2 dir = new Vec2(0 ,0);
-    private double increment = 0;
-    private double speed = -2;
+
     @Override
     protected void onUpdate(double tpf){
         increment += speed;
-        //player.translate(dir);
-        if(getGameWorld().getEntitiesByType(Entities.ENEMY).size() < 3){
 
-        }
         player.translateY(speed);
+        if(isPlayer2)
+            player2.translateY(speed);
         viewport.setY(increment);
         if(viewport.getY() < -1600){
-            player.setY(500);
-            increment = 0;
+            player.setY(800);
+            increment = 500;
             getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
             startLevel();
         }
@@ -205,30 +195,44 @@ public class Game extends GameApplication {
     @Override
     protected void initPhysics(){
 
-        onCollision(Entities.PLAYER, Entities.BULLET, (player, bullet) -> {
-            System.out.println("PLAYER HAS BEEN SHOT");
+        onCollision(Entities.PLAYER, Entities.ENEMY, (player, enemy) -> {
             player.removeFromWorld();
-            getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
+            resetLevel();
         });
 
-        onCollision(Entities.PLAYER, Entities.ENEMY, (player, enemy) -> {
-            player.setY(500);
-            increment = 0;
+        onCollision(Entities.ENEMY, Entities.BULLET, (enemy, bullet) -> {
+            if(bullet.getComponent(Teams.class).side == 0){
+                enemy.removeFromWorld();
+                bullet.removeFromWorld();
+                inc("score", 1);
+                score++;
+            }
+        });
+
+        onCollision(Entities.PLAYER, Entities.BULLET, (player, bullet) -> {
+            if(bullet.getComponent(Teams.class).side == 1){
+                player.removeFromWorld();
+                resetLevel();
+            }
+        });
+
+
+    }
+
+    protected void resetLevel(){
+        if(getGameWorld().getEntitiesByType(Entities.PLAYER).size() <1){
+            if(isPlayer2){
+                player2.setY(800);
+                player2.setX(1000);
+            }
+            player.setY(800);
+            player.setX(800);
+            increment = 500;
             getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
             startLevel();
             inc("score", -score);
             score = 0;
-        });
-
-        onCollision(Entities.ENEMY, Entities.BULLET, (enemy, bullet) -> {
-            System.out.println("ENEMY HAS BEEN SHOT");
-            enemy.removeFromWorld();
-            bullet.removeFromWorld();
-            inc("score", 1);
-            score++;
-        });
-
-
+        }
     }
 
     @Override

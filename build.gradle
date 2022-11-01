@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.jonathanc8'
-version '1.0-SNAPSHOT'
+version '0.1-Test'
 
 repositories {
     mavenCentral()
@@ -57,4 +57,12 @@ jlink {
 
 jlinkZip {
     group = 'distribution'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.jonathanc8.fxglgame.Game'
+    }
+
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
 }
