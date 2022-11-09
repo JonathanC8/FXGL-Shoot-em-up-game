@@ -3,17 +3,21 @@ package com.jonathanc8.fxglgame;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.app.scene.Viewport;
+import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.dsl.FXGL;
-import com.almasb.fxgl.dsl.components.ProjectileComponent;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
+import com.jonathanc8.fxglgame.components.PlayerControl;
+import com.jonathanc8.fxglgame.components.Teams;
+import com.jonathanc8.fxglgame.factories.ShmupFactory;
 import javafx.geometry.Point2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -24,64 +28,41 @@ public class Game extends GameApplication {
     private Entity enemy;
     private Entity bullet;
     private Viewport viewport;
-    private double increment = 500;
-    private double speed = -2;
-    private int moveSpeed = 5;
+    private double increment = 6000;
+    private int camSpeed = -2;
+    private int moveSpeed = 8;
     private boolean isPlayer2 = false;
+    private int score = 0;
+    private boolean alive;
+    private boolean devMode = false;
 
 
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1600);
         settings.setHeight(900);
-        settings.setVersion("0.01");
-        settings.setTitle("Some Shmup game");
+        settings.setVersion("Early Development");
+        settings.setTitle("A game without a name");
+        settings.setScaleAffectedOnResize(true);
+        //settings.setMainMenuEnabled(true);
+        //settings.setGameMenuEnabled(true);
+
+        settings.setSceneFactory(new MainSceneFactory());
     }
 
     @Override
     protected void initGame(){
         getGameWorld().addEntityFactory(new ShmupFactory());
-        entityBuilder().at(500, 600).view("Untitled.png").rotate(-90).buildAndAttach();
+
+        entityBuilder().at(0, 600).view(texture("Untitled.png")).rotate(-90).buildAndAttach();
 
         player = spawn("player", new SpawnData().put("color", Color.BLUE));
+        alive = true;
 
         viewport = getGameScene().getViewport();
 
         startLevel();
-
-    }
-
-    protected void startLevel(){
-        if(!player.isActive())
-            player = spawn("player", new SpawnData().put("color", Color.BLUE));
-        if(isPlayer2)
-            if(!player2.isActive()){
-                player2 = spawn("player", new SpawnData(player.getCenter().getX()+100, player.getCenter().getY()).put("color", Color.PINK));
-            }
-
-        spawn("enemy", new SpawnData(600, 200));
-        spawn("enemy", new SpawnData(800, 150));
-        spawn("enemy", new SpawnData(1000, 200));
-
-        spawn("enemy", new SpawnData(950, -50));
-        spawn("enemy", new SpawnData(900, -200));
-        spawn("enemy", new SpawnData(950, -350));
-        spawn("enemy", new SpawnData(900, -500));
-
-        spawn("enemy", new SpawnData(600, -550));
-        spawn("enemy", new SpawnData(800, -300));
-
-        spawn("enemy", new SpawnData(600, -900));
-        spawn("enemy", new SpawnData(700, -950));
-        spawn("enemy", new SpawnData(1000, -900));
-
-        spawn("enemy", new SpawnData(700, -1100));
-        spawn("enemy", new SpawnData(900, -1100));
-
-        spawn("enemy", new SpawnData(600, -1200));
-        spawn("enemy", new SpawnData(800, -1250));
-        spawn("enemy", new SpawnData(1000, -1200));
-
+        //testBedMode();
     }
 
     @Override
@@ -91,14 +72,16 @@ public class Game extends GameApplication {
         input.addAction(new UserAction("Move Right") {
             @Override
             protected void onAction(){
-                player.translateX(5);
+                if(player.isActive())
+                    player.getComponent(PlayerControl.class).onMove(new Vec2(moveSpeed, 0));
             }
         }, KeyCode.D);
 
         input.addAction(new UserAction("Move Left") {
             @Override
             protected void onAction(){
-                player.translateX(-5);
+                if(player.isActive())
+                    player.getComponent(PlayerControl.class).onMove(new Vec2(-moveSpeed, 0));
             }
         }, KeyCode.A);
 
@@ -106,14 +89,16 @@ public class Game extends GameApplication {
         input.addAction(new UserAction("Move Down") {
             @Override
             protected void onAction(){
-                player.translateY(5);
+                if(player.isActive())
+                    player.getComponent(PlayerControl.class).onMove(new Vec2(0, moveSpeed));
             }
         }, KeyCode.S);
 
         input.addAction(new UserAction("Move Up") {
             @Override
             protected void onAction(){
-                player.translateY(-5);
+                if(player.isActive())
+                    player.getComponent(PlayerControl.class).onMove(new Vec2(0, -moveSpeed));
             }
         }, KeyCode.W);
 
@@ -126,22 +111,22 @@ public class Game extends GameApplication {
 
         onKey(KeyCode.RIGHT, () -> {
             if(isPlayer2)
-                player2.translateX(moveSpeed);
+                player2.getComponent(PlayerControl.class).onMove(new Vec2(moveSpeed, 0));
         });
 
         onKey(KeyCode.LEFT, () -> {
             if(isPlayer2)
-                player2.translateX(-moveSpeed);
+                player2.getComponent(PlayerControl.class).onMove(new Vec2(-moveSpeed, 0));
         });
 
         onKey(KeyCode.UP, () -> {
             if(isPlayer2)
-                player2.translateY(-moveSpeed);
+                player2.getComponent(PlayerControl.class).onMove(new Vec2(0, -moveSpeed));
         });
 
         onKey(KeyCode.DOWN, () -> {
             if(isPlayer2)
-                player2.translateY(moveSpeed);
+                player2.getComponent(PlayerControl.class).onMove(new Vec2(0, moveSpeed));
         });
 
         onKeyDown(KeyCode.DELETE, () -> {
@@ -150,16 +135,63 @@ public class Game extends GameApplication {
                     new Point2D(0,-10)).put("side", 0));
         });
 
-
-        onKeyDown(KeyCode.SPACE, () -> {
-            if(player.isActive())
-                spawn("bullet", new SpawnData(player.getCenter().getX(), player.getCenter().getY()-25).put("dir",
-                        new Point2D(0,-10)).put("side", 0));
-        });
+        input.addAction(new UserAction("Shoot") {
+            @Override
+            protected void onAction() {
+                if(player.isActive()) {
+                    player.getComponent(PlayerControl.class).shoot();
+                }
+            }
+        }, KeyCode.SPACE);
 
         onKeyDown(KeyCode.E, () -> {
-            viewport.bindToEntity(player, 300 , 300);
-        } );
+            viewport.bindToEntity(player, getAppCenter().getX() , getAppCenter().getY());
+        });
+
+    }
+
+    @Override
+    protected void initPhysics(){
+
+        onCollision(Entities.PLAYER, Entities.ENEMY, (player, enemy) -> {
+            player.removeFromWorld();
+            cleanUp();
+        });
+
+        onCollision(Entities.ENEMY, Entities.PROJECTILE, (enemy, bullet) -> {
+            if(bullet.getComponent(Teams.class).side == 0){
+                spawn("explosion", new SpawnData(enemy.getCenter().subtract(100, 100)).put("entity", "enemy"));
+                play("explosion huge.wav");
+                enemy.removeFromWorld();
+                bullet.removeFromWorld();
+                inc("score", 1);
+                score++;
+            }
+        });
+
+        onCollision(Entities.PLAYER, Entities.PROJECTILE, (player, bullet) -> {
+            if(bullet.getComponent(Teams.class).side == 1){
+                spawn("explosion", new SpawnData(player.getCenter().subtract(70, 80)).put("entity", "player"));
+                spawn("explosion", new SpawnData(bullet.getCenter().subtract(8, 50)).put("entity", "missile"));
+                play("explosion medium.wav");
+                alive = false;
+                player.removeFromWorld();
+                bullet.removeFromWorld();
+                getGameController().gotoGameMenu();
+
+            }
+        });
+
+        onCollision(Entities.PROJECTILE, Entities.PROJECTILE, (projectile1, projectile2) -> {
+            if(projectile1.getComponent(Teams.class).side != projectile2.getComponent(Teams.class).side){
+                spawn("explosion", new SpawnData(projectile1.getCenter()).put("entity", "missile"));
+                play("explosion small.wav");
+                projectile1.removeFromWorld();
+                projectile2.removeFromWorld();
+
+            }
+        });
+
 
     }
 
@@ -176,70 +208,48 @@ public class Game extends GameApplication {
 
     @Override
     protected void onUpdate(double tpf){
-        increment += speed;
+        if(alive && !devMode){
+            viewport.setY(increment);
+            increment += camSpeed;
+            player.translateY(camSpeed);
+        }
 
-        player.translateY(speed);
+    }
+
+    protected void testBedMode(){
+        viewport.setY(6000);
+        spawn("missile", new SpawnData(800, 6000).put("side", Entities.ENEMY));
+        player.setY(6500);
+
+    }
+
+    protected void startLevel(){
+        cleanUp();
+        if(!player.isActive())
+            player = spawn("player", new SpawnData().put("color", Color.BLUE));
         if(isPlayer2)
-            player2.translateY(speed);
-        viewport.setY(increment);
-        if(viewport.getY() < -1600){
-            player.setY(800);
-            increment = 500;
-            getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
-            startLevel();
+            if(!player2.isActive()){
+                player2 = spawn("player", new SpawnData(player.getCenter().getX()+100, player.getCenter().getY()).put("color", Color.PINK));
+            }
+    }
+
+    public void cleanUp(){
+        ArrayList<Entity> entities = getGameWorld().getEntities();
+        for(int i=0; entities.size() > i; i++) {
+            entities.get(i).removeFromWorld();
         }
-
+        resetLevel();
     }
-
-    private int score = 0;
-    @Override
-    protected void initPhysics(){
-
-        onCollision(Entities.PLAYER, Entities.ENEMY, (player, enemy) -> {
-            player.removeFromWorld();
-            resetLevel();
-        });
-
-        onCollision(Entities.ENEMY, Entities.BULLET, (enemy, bullet) -> {
-            if(bullet.getComponent(Teams.class).side == 0){
-                enemy.removeFromWorld();
-                bullet.removeFromWorld();
-                inc("score", 1);
-                score++;
-            }
-        });
-
-        onCollision(Entities.PLAYER, Entities.BULLET, (player, bullet) -> {
-            if(bullet.getComponent(Teams.class).side == 1){
-                player.removeFromWorld();
-                resetLevel();
-            }
-        });
-
-
-    }
-
     protected void resetLevel(){
-        if(getGameWorld().getEntitiesByType(Entities.PLAYER).size() <1){
-            if(isPlayer2){
-                player2.setY(800);
-                player2.setX(1000);
-            }
-            player.setY(800);
-            player.setX(800);
-            increment = 500;
-            getGameWorld().removeEntities(getGameWorld().getEntitiesByType(Entities.ENEMY));
-            startLevel();
-            inc("score", -score);
-            score = 0;
-        }
+        increment = 6000;
+        setLevelFromMap("testLevelMap.tmx");
+
     }
 
     @Override
     protected void initGameVars(Map<String, Object> vars){
         vars.put("score", 0);
     }
-
     public static void main(String[] args){
         launch(args);
     }
