@@ -1,0 +1,989 @@
+14:34:41.276 [main                     ] DEBUG Logger               - Configured Logger
+14:34:41.292 [main                     ] DEBUG GameApplication      - Logging settings
+Title: A game without a name
+Version: Early Development
+Width: 1600
+Height: 900
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.jonathanc8.fxglgame.MainSceneFactory
+
+14:34:41.922 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+14:34:41.927 [JavaFX Application Thread] INFO  Engine               - FXGL-17.1 (24.03.2022 17.34) on WINDOWS (J:17.0.2 FX:17.0.2-ea)
+14:34:41.928 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+14:34:41.928 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Windows 10 version 10.0
+14:34:41.928 [JavaFX Application Thread] DEBUG Engine               - Architecture: amd64
+14:34:41.928 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+14:34:41.928 [JavaFX Application Thread] INFO  Engine               -       Ask questions and discuss at: https://github.com/AlmasB/FXGL/discussions
+14:34:41.928 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+14:34:41.992 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Creating a JavaFX scene
+14:34:42.035 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Target settings size: 1600.0 x 900.0
+14:34:42.036 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled scene size:    1600.0 x 900.0
+14:34:42.036 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+14:34:42.037 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Set initial scene to FXGLStartupScene
+14:34:42.043 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Opening main window
+14:34:42.113 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Window border size: (16.0, 39.0)
+14:34:42.113 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled size: 1600.0 x 900.0
+14:34:42.113 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+14:34:42.113 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scene size: 1600.0 x 900.0
+14:34:42.114 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Stage size: 1616.0 x 939.0
+14:34:42.119 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+14:34:42.146 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - User app class for loading assets: class com.jonathanc8.fxglgame.Game
+14:34:42.146 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+14:34:42.147 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/ui/css/fxgl_dark.css
+14:34:42.186 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+14:34:42.243 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+14:34:42.311 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=900, physics.ppm=50.0
+14:34:42.312 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Using strategy: BRUTE_FORCE
+14:34:42.318 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1600x900
+14:34:42.333 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyMainMenu()
+14:34:42.348 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+14:34:42.359 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/textures/particles/smoke.png
+14:34:42.455 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/textures/particles/trace_horizontal.png
+14:34:42.503 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Application scenes initialized
+14:34:42.517 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+14:34:42.523 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: D:\Projects\Coding\Java\FXGLGame\system\fxgl.bundle
+14:34:42.531 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+14:34:42.531 [FXGL Background Thread 1 ] DEBUG UpdaterService       - Checking for updates
+14:34:42.536 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Loading fonts
+14:34:42.536 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/ui/fonts/VarelaRound-Regular.ttf
+14:34:42.536 [FXGL Background Thread 1 ] DEBUG FXGLApplication      - Loading default localization
+14:34:42.537 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/languages/english.lang
+14:34:42.570 [FXGL Background Thread 1 ] INFO  FXGLApplication      - FXGL initialization took: 0.450 sec
+14:34:42.583 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+14:34:42.584 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+14:34:42.584 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Down - S
+14:34:42.584 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Up - W
+14:34:42.585 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action0 - Enter
+14:34:42.586 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action1 - Right
+14:34:42.586 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action2 - Left
+14:34:42.587 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action3 - Up
+14:34:42.587 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action4 - Down
+14:34:42.588 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action5 - Delete
+14:34:42.588 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Shoot - Space
+14:34:42.588 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action6 - E
+14:34:42.589 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/textures/fxgl_icon.png
+14:34:42.616 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/textures/fxgl_default_cursor.png
+14:34:42.619 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - CTRL+8
+14:34:42.620 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+14:34:42.620 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+14:34:42.621 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Toggle Debug Camera - CTRL+7
+14:34:42.624 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+14:34:42.625 [JavaFX Application Thread] DEBUG LoopRunner           - Initializing JavaFX AnimationTimerLoop
+14:34:42.628 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:34:42.638 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLStartupScene and adding to FXGLMainMenuDummyScene
+14:34:42.639 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLStartupScene -> FXGLMainMenuDummyScene
+14:34:42.639 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: FXGLDefaultMenu
+14:34:42.643 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:34:42.660 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLDefaultMenu
+14:34:42.661 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> FXGLDefaultMenu
+14:34:42.686 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/ui/fonts/Abel-Regular.ttf
+14:34:42.697 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/ui/fonts/TerminalLandMono-Regular.otf
+14:34:42.707 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Jonat/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar!/fxglassets/ui/fonts/Courier-Prime.ttf
+14:34:42.751 [JavaFX Application Thread] DEBUG FXGLApplication      - Registering font factories with UI factory
+14:34:43.043 [FXGL Background Thread 2 ] INFO  UpdaterService       - Your current version:  17.1
+14:34:43.044 [FXGL Background Thread 2 ] INFO  UpdaterService       - Latest stable version: 17.2
+14:34:45.528 [JavaFX Application Thread] DEBUG Menu                 - fireNewGame()
+14:34:45.528 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+14:34:45.530 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: FXGLDefaultMenu
+14:34:45.530 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:34:45.531 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLDefaultMenu and adding to FXGLMainMenuDummyScene
+14:34:45.531 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene <- FXGLDefaultMenu
+14:34:45.531 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:34:45.535 [FXGL Background Thread 3 ] DEBUG Engine               - Logging environment variables
+14:34:45.536 [FXGL Background Thread 3 ] DEBUG Engine               - achievements: []
+14:34:45.536 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeight: 900.0
+14:34:45.536 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeightProperty: ReadOnlyDoubleProperty [value: 900.0]
+14:34:45.536 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidth: 1600.0
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidthProperty: ReadOnlyDoubleProperty [value: 1600.0]
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - appIcon: fxgl_icon.png
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - applicationMode: DEVELOPER
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - collisionDetectionStrategy: BRUTE_FORCE
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - configClass: Optional.empty
+14:34:45.537 [FXGL Background Thread 3 ] DEBUG Engine               - credits: []
+14:34:45.538 [FXGL Background Thread 3 ] DEBUG Engine               - defaultCursor: CursorInfo(imageName=fxgl_default_cursor.png, hotspotX=7.0, hotspotY=6.0)
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - devEnableDebugCameraProperty: BooleanProperty [value: false]
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - enabledMenuItems: []
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.services.FXGLAssetLoaderService, class com.almasb.fxgl.app.FXGLApplication$GameApplicationService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+14:34:45.539 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLLoadingScene
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - fontMono: TerminalLandMono-Regular.otf
+14:34:45.539 [FXGL Background Thread 3 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+14:34:45.539 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> FXGLLoadingScene
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+14:34:45.540 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficulty: MEDIUM
+14:34:45.540 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+14:34:45.540 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolume: 0.5
+14:34:45.540 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.5]
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolume: 0.5
+14:34:45.540 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.5]
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - height: 900
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - is3D: false
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - isAndroid: false
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - isBrowser: false
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - isClickFeedbackEnabled: false
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - isCloseConfirmation: false
+14:34:45.541 [FXGL Background Thread 3 ] DEBUG Engine               - isDesktop: true
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isDeveloperMenuEnabled: false
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isEmbedded: false
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isEntityPreloadEnabled: true
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+14:34:45.542 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isFileSystemWriteAllowed: true
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenAllowed: false
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenFromStart: false
+14:34:45.542 [FXGL Background Thread 3 ] DEBUG Engine               - isGameMenuEnabled: true
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isIOS: false
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isIntroEnabled: false
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isLinux: false
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isMac: false
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isMainMenuEnabled: true
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isManualResizeEnabled: true
+14:34:45.543 [FXGL Background Thread 3 ] DEBUG Engine               - isMobile: false
+14:34:45.544 [FXGL Background Thread 3 ] DEBUG Engine               - isNative: false
+14:34:45.544 [FXGL Background Thread 3 ] DEBUG Engine               - isPauseMusicWhenMinimized: true
+14:34:45.544 [FXGL Background Thread 3 ] DEBUG Engine               - isPreserveResizeRatio: false
+14:34:45.544 [FXGL Background Thread 3 ] DEBUG Engine               - isProfilingEnabled: false
+14:34:45.544 [FXGL Background Thread 3 ] DEBUG Engine               - isScaleAffectedOnResize: true
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - isSingleStep: false
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - isUserProfileEnabled: false
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - isWindows: true
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - menuKey: ESCAPE
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - mouseSensitivity: 0.2
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - pixelsPerMeter: 50.0
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - platform: WINDOWS
+14:34:45.545 [FXGL Background Thread 3 ] DEBUG Engine               - prefHeightProperty: ReadOnlyDoubleProperty [value: 900.0]
+14:34:45.546 [FXGL Background Thread 3 ] DEBUG Engine               - prefWidthProperty: ReadOnlyDoubleProperty [value: 1600.0]
+14:34:45.546 [FXGL Background Thread 3 ] DEBUG Engine               - profileDir: profiles/
+14:34:45.546 [FXGL Background Thread 3 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+14:34:45.546 [FXGL Background Thread 3 ] DEBUG Engine               - randomSeed: -1
+14:34:45.546 [FXGL Background Thread 3 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=WINDOWS, version=17.1, build=24.03.2022 17.34)
+14:34:45.546 [FXGL Background Thread 3 ] DEBUG Engine               - saveFileExt: sav
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - scaledHeightProp$fxgl: DoubleProperty [bound, value: 900.0]
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - scaledWidthProp$fxgl: DoubleProperty [bound, value: 1600.0]
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - sceneFactory: com.jonathanc8.fxglgame.MainSceneFactory@51670582
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - secondsIn24h: 60
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - soundNotification: core/notification.wav
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - stageStyle: DECORATED
+14:34:45.547 [FXGL Background Thread 3 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - ticksPerSecond: -1
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - title: A game without a name
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/release/README.md
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - userAppClass: class com.jonathanc8.fxglgame.Game
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - version: Early Development
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - versionCheckDays: 7
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - width: 1600
+14:34:45.548 [FXGL Background Thread 3 ] DEBUG Engine               - Logging services
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLAssetLoaderService
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.FXGLApplication$GameApplicationService
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+14:34:45.549 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+14:34:45.551 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+14:34:45.552 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+14:34:45.552 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+14:34:45.552 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+14:34:45.552 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+14:34:45.552 [FXGL Background Thread 2 ] WARN  FXGLAssetLoaderServi - Asset "/assets/textures/Untitled.png" was not found!
+14:34:45.552 [FXGL Background Thread 2 ] WARN  FXGLAssetLoaderServi - Failed to load IMAGE
+14:34:45.579 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/ship/sparrow.png
+14:34:45.626 [FXGL Background Thread 2 ] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:34:45.648 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:34:45.650 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:34:45.652 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:34:45.661 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:34:45.708 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating object layer entities
+14:34:45.709 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/ship/hai%20water%20bug.png
+14:34:45.726 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/ship/wasp.png
+14:34:45.746 [FXGL Background Thread 2 ] DEBUG GameWorld            - Clearing removable entities
+14:34:45.748 [FXGL Background Thread 2 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3e3f9fc3
+14:34:45.759 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.217 sec
+14:34:45.769 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:34:45.774 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+14:34:45.774 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+14:34:47.548 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/projectile/javelin.png
+14:34:52.202 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/sounds/blaster.wav
+14:34:52.278 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/projectile/blaster+.png
+14:34:53.002 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/small~1.png
+14:34:53.004 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/small~2.png
+14:34:53.005 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/small~3.png
+14:34:53.006 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/small~4.png
+14:34:53.006 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/small~5.png
+14:34:53.007 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/small~6.png
+14:34:53.009 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~0.png
+14:34:53.014 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/sounds/explosion%20small.wav
+14:34:53.786 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~1.png
+14:34:53.788 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~2.png
+14:34:53.790 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~3.png
+14:34:53.792 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~4.png
+14:34:53.795 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~5.png
+14:34:53.797 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~6.png
+14:34:53.800 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~7.png
+14:34:53.802 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/textures/effect/explosion/huge~8.png
+14:34:53.805 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/sounds/explosion%20huge.wav
+14:34:53.947 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/sounds/explosion%20medium.wav
+14:35:40.923 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:40.939 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:40.939 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:40.940 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:40.943 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:40.976 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:40.981 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:40.981 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@4bc7d899
+14:35:40.987 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:40.997 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:40.997 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:40.997 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.007 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.045 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.051 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.052 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6909e9e0
+14:35:41.067 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.079 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.079 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.079 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.093 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.122 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.128 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.130 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@c984244
+14:35:41.147 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.157 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.157 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.157 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.169 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.212 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.217 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.218 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3ae2613f
+14:35:41.227 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.236 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.236 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.236 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.249 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.282 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.290 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.291 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@4a6c6fc9
+14:35:41.307 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.313 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.314 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.314 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.317 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.342 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.347 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.348 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@749be6a2
+14:35:41.355 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.359 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.359 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.359 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.363 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.391 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.398 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.399 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@1b7261c3
+14:35:41.403 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.406 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.406 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.407 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.423 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.453 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.458 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.459 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6ca5f08f
+14:35:41.468 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.476 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.476 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.476 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.492 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.531 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.536 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.537 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7ec726ee
+14:35:41.547 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.551 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.551 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.552 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.556 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.580 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.585 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.586 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6547aca5
+14:35:41.595 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.599 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.599 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.600 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.610 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.647 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.652 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.652 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@149c18d6
+14:35:41.659 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.661 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.661 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.661 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.666 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.690 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.694 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.694 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@39d43089
+14:35:41.707 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.710 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.710 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.710 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.721 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.752 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.756 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.757 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@2fa011bc
+14:35:41.771 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.773 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.773 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.773 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.775 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.800 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.804 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.805 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7eaa8ff6
+14:35:41.819 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.821 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.821 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.821 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.826 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.853 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.858 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.858 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@516009c1
+14:35:41.867 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.870 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.870 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.870 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.874 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.897 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.901 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.902 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@760fd8de
+14:35:41.915 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.918 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.918 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.918 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.922 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.945 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.948 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:41.949 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@776eac0b
+14:35:41.963 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:41.966 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:41.966 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:41.966 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:41.969 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:41.994 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:41.999 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.000 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@366880ee
+14:35:42.011 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.013 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.014 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.014 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.018 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.043 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.046 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.047 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@21dd2a4a
+14:35:42.059 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.061 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.061 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.062 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.064 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.087 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.092 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.093 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@43c0570c
+14:35:42.123 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.125 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.125 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.125 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.128 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.165 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.168 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.169 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@2efa7fe2
+14:35:42.171 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.173 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.173 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.173 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.176 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.197 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.201 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.201 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@51778193
+14:35:42.216 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.218 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.218 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.218 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.220 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.241 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.244 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.245 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@1e1ca1fb
+14:35:42.251 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.254 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.255 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.255 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.263 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.282 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.286 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.286 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@546a26d4
+14:35:42.300 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.302 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.302 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.302 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.310 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.329 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.333 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.333 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@16c19d8
+14:35:42.355 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.357 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.357 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.357 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.365 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.393 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.396 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.397 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@35c58d02
+14:35:42.411 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.413 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.413 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.413 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.419 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.447 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.450 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.451 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@21979746
+14:35:42.459 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.461 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.461 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.461 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.470 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.499 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.503 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.503 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3116753d
+14:35:42.507 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.509 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.509 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.509 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.516 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.545 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.549 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.550 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7fdc33c0
+14:35:42.555 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.558 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.558 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.558 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.562 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.584 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.588 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.589 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3497d405
+14:35:42.603 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.606 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.606 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.606 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.612 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.637 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.640 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.640 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@59461371
+14:35:42.652 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.654 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.654 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.655 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.659 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.681 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.684 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.685 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@776aadce
+14:35:42.699 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.701 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.701 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.701 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.705 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.728 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.731 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.731 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@14e289a1
+14:35:42.747 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.748 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.748 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.749 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.752 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.775 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.778 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.779 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@1a346aa7
+14:35:42.793 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.794 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.794 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.795 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.797 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.816 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.820 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.820 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6995261f
+14:35:42.827 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.828 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.828 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.828 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.833 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.852 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.855 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.856 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@150db3cf
+14:35:42.859 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.860 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.860 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.861 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.871 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.894 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.897 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.897 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@62c32409
+14:35:42.907 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.908 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.908 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.908 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.913 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.931 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.935 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.935 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@2a79b7b
+14:35:42.936 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.938 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.938 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.938 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.943 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:42.969 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:42.973 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:42.974 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@1987ed3b
+14:35:42.975 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:42.977 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:42.977 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:42.977 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:42.978 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.000 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.003 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.003 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@10c31c21
+14:35:43.019 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.021 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.021 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.021 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.030 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.056 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.059 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.059 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@41eac15
+14:35:43.060 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.061 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.061 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.061 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.067 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.087 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.090 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.091 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@721c272e
+14:35:43.092 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.094 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.094 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.094 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.095 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.114 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.118 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.118 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@58d7c4bc
+14:35:43.131 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.133 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.133 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.133 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.136 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.156 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.160 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.160 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@131429ae
+14:35:43.161 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.163 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.163 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.163 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.168 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.188 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.191 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.192 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@5b4d2d16
+14:35:43.192 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.194 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.194 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.194 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.195 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.215 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.218 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.218 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@30d72d86
+14:35:43.227 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.228 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.228 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.229 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.232 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.254 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.257 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.258 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@40959176
+14:35:43.259 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.260 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.260 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.260 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.266 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.294 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.297 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.298 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@62ea7f6c
+14:35:43.299 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.301 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.301 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.301 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.303 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.325 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.328 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.328 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@506c15a2
+14:35:43.339 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.341 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.341 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.341 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.345 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.363 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.365 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.366 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@63de4eb2
+14:35:43.367 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.368 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.368 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.368 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.372 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.390 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.393 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.394 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7be49085
+14:35:43.394 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.395 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.395 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.396 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.397 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.415 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.418 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.418 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@62510fd8
+14:35:43.432 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.433 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.433 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.433 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.435 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.454 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.457 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.458 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@39cb0f85
+14:35:43.459 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.460 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.460 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.460 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.464 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.482 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.485 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.486 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@166b7212
+14:35:43.487 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.488 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.488 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.488 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.490 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.507 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.510 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.510 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@1a302b88
+14:35:43.515 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.516 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.516 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.517 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.519 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.539 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.542 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.543 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@4d435ef6
+14:35:43.543 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.544 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.544 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.545 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.549 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.570 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.573 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.573 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@483ab0ab
+14:35:43.574 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.575 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.575 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.575 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.577 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.596 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.599 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.600 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@adc1690
+14:35:43.611 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.613 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.613 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.613 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.618 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.637 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.640 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.641 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@18b9106c
+14:35:43.642 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.643 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.643 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.643 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.647 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.664 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.668 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.668 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@4476cc6a
+14:35:43.669 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.670 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.670 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.671 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.672 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.691 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.694 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.694 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@1acfba67
+14:35:43.707 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.708 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.708 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.708 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.710 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.727 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.730 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.731 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6917d475
+14:35:43.732 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.733 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.733 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.733 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.737 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.756 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.759 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.759 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@230a5b53
+14:35:43.760 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.761 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.761 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.761 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.762 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.780 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.783 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.784 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7329d96
+14:35:43.787 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.788 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.788 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.788 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.792 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.811 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.813 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.814 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7137f889
+14:35:43.815 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.816 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.816 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.816 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.820 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.838 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.840 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.841 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@25027ada
+14:35:43.841 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.843 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.843 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.843 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.844 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.864 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.866 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.867 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@44c640b7
+14:35:43.882 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.883 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.883 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.883 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.885 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.904 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.907 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.907 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@7f03ec2e
+14:35:43.908 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.909 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.909 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.909 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.912 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.931 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.934 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.934 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6672c5dd
+14:35:43.935 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.936 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.936 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.936 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.938 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.956 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.959 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.960 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@102d030a
+14:35:43.963 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.964 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.964 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.965 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.968 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:43.986 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:43.989 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:43.989 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@4736825a
+14:35:43.990 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:43.991 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:43.991 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:43.991 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:43.994 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.012 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.015 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.015 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@4484ebce
+14:35:44.016 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.018 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.018 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.018 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.020 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.037 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.040 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.041 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@5a089f7e
+14:35:44.042 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.044 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.044 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.044 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.047 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.069 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.072 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.073 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@40586787
+14:35:44.073 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.074 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.074 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.075 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.078 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.097 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.100 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.100 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@5bc2491d
+14:35:44.101 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.102 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.103 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.103 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.104 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.123 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.126 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.126 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3098fbd3
+14:35:44.139 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.141 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.141 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.141 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.144 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.164 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.166 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.167 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@73efd224
+14:35:44.168 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.169 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.169 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.169 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.173 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.195 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.198 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.199 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@576c127f
+14:35:44.200 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.202 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.203 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.203 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.205 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.224 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.227 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.227 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@208cbc91
+14:35:44.235 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.236 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.236 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.237 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.240 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.264 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.267 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.268 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@8371f3e
+14:35:44.269 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.270 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.270 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.270 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.275 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.298 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.301 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.301 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@389c3fe9
+14:35:44.302 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.303 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.303 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.303 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.305 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.325 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.327 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.328 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@241b46a
+14:35:44.331 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.332 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.332 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.333 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.335 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.356 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.358 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.359 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@193f9f4
+14:35:44.359 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.360 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.360 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.360 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.363 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.381 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.383 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.384 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@b16fa9c
+14:35:44.385 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.386 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.386 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.386 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.387 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.406 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.408 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.409 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@50a4e663
+14:35:44.412 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.413 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.413 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.414 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.417 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.436 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.439 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.439 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@52c0855e
+14:35:44.440 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.441 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.441 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.441 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.444 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.462 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.465 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.466 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@308c2be7
+14:35:44.467 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.469 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.469 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.469 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.471 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.491 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.494 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.494 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@21934595
+14:35:44.507 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.508 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.508 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.508 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.510 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.530 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.534 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.535 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@e4b48aa
+14:35:44.535 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.536 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.536 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.536 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.541 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.560 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.562 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.563 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3c3f83a4
+14:35:44.563 [JavaFX Application Thread] WARN  TMXLevelLoader       - TiledMap generated from 1.4.3. Supported version: 1.4.2. Some features may not be parsed fully.
+14:35:44.564 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/Coding/Java/FXGLGame/build/resources/main/assets/levels/testLevelMap.tmx
+14:35:44.564 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:35:44.564 [JavaFX Application Thread] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:35:44.566 [JavaFX Application Thread] DEBUG TilesetLoader        - Created buffer with size 1600.0x6400.0
+14:35:44.584 [JavaFX Application Thread] DEBUG TMXLevelLoader       - Creating object layer entities
+14:35:44.586 [JavaFX Application Thread] DEBUG GameWorld            - Clearing removable entities
+14:35:44.587 [JavaFX Application Thread] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@39c8f4f2
+14:35:44.687 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+14:35:44.687 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+14:35:44.687 [JavaFX Application Thread] DEBUG SystemBundleService  - Saving FXGL system data
+14:35:44.689 [JavaFX Application Thread] DEBUG FileSystemAccess     - Writing to: D:\Projects\Coding\Java\FXGLGame\system\fxgl.bundle
+14:35:44.690 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+14:35:44.691 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Closing main window
+14:35:44.726 [JavaFX Application Thread] DEBUG Logger               - Closing Logger

@@ -5,24 +5,21 @@ import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.component.Component;
-import com.jonathanc8.fxglgame.Entities;
+import com.jonathanc8.fxglgame.EntityTypes;
 import javafx.geometry.Point2D;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 public class PlayerControl extends Component {
     private Entity player;
     private Viewport viewport;
-    public double shootSpeed = 20;
+    public double shootSpeed;
     public double timer = shootSpeed;
     public double shootDamage;
     public int specialAmmo;
-    public Entities specialType;
-    public  boolean keepShoot = false;
-    public PlayerControl(Entity player, double shootSpeed){
-        this.player = player;
+    private int health;
+    public PlayerControl(double shootSpeed){
         this.viewport = getGameScene().getViewport();
-        shootDamage = 1;
-        specialAmmo = 0;
+        this.shootSpeed = shootSpeed;
     }
 
     public void onMove(Vec2 dir){
@@ -59,15 +56,30 @@ public class PlayerControl extends Component {
     public void shoot(){
         if(timer >= shootSpeed){
             play("blaster.wav");
-            spawn("bullet", new SpawnData(player.getCenter().getX(), player.getCenter().getY()-25).put("dir",
-                    new Point2D(0,-10)).put("side", 0));
+            spawn("bullet", new SpawnData(player.getCenter().getX()+15, player.getCenter().getY()-25).put("dir",
+                    new Point2D(0,-10)).put("side", EntityTypes.PLAYER));
+            spawn("bullet", new SpawnData(player.getCenter().getX()-18, player.getCenter().getY()-25).put("dir",
+                    new Point2D(0,-10)).put("side", EntityTypes.PLAYER));
         timer = 0;
         }
     }
 
+
+    @Override
+    public void onAdded(){
+        player = this.entity;
+
+    }
+
     @Override
     public void onUpdate(double tpf){
+        health = player.getComponent(Stats.class).getHealth();
         if(timer <= shootSpeed)
         timer++;
+        if(health <= 0){
+            spawn("explosion", new SpawnData(player.getCenter().subtract(70, 80)).put("entity", "player"));
+            play("explosion medium.wav");
+            player.removeFromWorld();
+        }
     }
 }

@@ -9,15 +9,23 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
+import com.almasb.fxgl.texture.Texture;
+import com.almasb.fxgl.time.TimerAction;
+import com.almasb.fxgl.ui.FXGLButton;
 import com.jonathanc8.fxglgame.components.PlayerControl;
+import com.jonathanc8.fxglgame.components.Stats;
 import com.jonathanc8.fxglgame.components.Teams;
 import com.jonathanc8.fxglgame.factories.ShmupFactory;
 import javafx.geometry.Point2D;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -34,7 +42,6 @@ public class Game extends GameApplication {
     private boolean isPlayer2 = false;
     private int score = 0;
     private boolean alive;
-    private boolean devMode = false;
 
 
     @Override
@@ -43,8 +50,9 @@ public class Game extends GameApplication {
         settings.setHeight(900);
         settings.setVersion("Early Development");
         settings.setTitle("A game without a name");
+        settings.setManualResizeEnabled(true);
         settings.setScaleAffectedOnResize(true);
-        //settings.setMainMenuEnabled(true);
+        settings.setMainMenuEnabled(true);
         //settings.setGameMenuEnabled(true);
 
         settings.setSceneFactory(new MainSceneFactory());
@@ -62,7 +70,6 @@ public class Game extends GameApplication {
         viewport = getGameScene().getViewport();
 
         startLevel();
-        //testBedMode();
     }
 
     @Override
@@ -153,36 +160,29 @@ public class Game extends GameApplication {
     @Override
     protected void initPhysics(){
 
-        onCollision(Entities.PLAYER, Entities.ENEMY, (player, enemy) -> {
-            player.removeFromWorld();
-            cleanUp();
+        onCollision(EntityTypes.PLAYER, EntityTypes.ENEMY, (player, enemy) -> {
+            player.getComponent(Stats.class).health -= enemy.getComponent(Stats.class).damage;
+            enemy.getComponent(Stats.class).health -= player.getComponent(Stats.class).damage;
         });
 
-        onCollision(Entities.ENEMY, Entities.PROJECTILE, (enemy, bullet) -> {
-            if(bullet.getComponent(Teams.class).side == 0){
-                spawn("explosion", new SpawnData(enemy.getCenter().subtract(100, 100)).put("entity", "enemy"));
-                play("explosion huge.wav");
-                enemy.removeFromWorld();
-                bullet.removeFromWorld();
-                inc("score", 1);
+        onCollision(EntityTypes.ENEMY, EntityTypes.PROJECTILE, (enemy, projectile) -> {
+            if(projectile.getComponent(Teams.class).side == 0){
+                enemy.getComponent(Stats.class).health -= projectile.getComponent(Stats.class).damage;
+                projectile.removeFromWorld();
                 score++;
             }
         });
 
-        onCollision(Entities.PLAYER, Entities.PROJECTILE, (player, bullet) -> {
-            if(bullet.getComponent(Teams.class).side == 1){
-                spawn("explosion", new SpawnData(player.getCenter().subtract(70, 80)).put("entity", "player"));
-                spawn("explosion", new SpawnData(bullet.getCenter().subtract(8, 50)).put("entity", "missile"));
-                play("explosion medium.wav");
-                alive = false;
-                player.removeFromWorld();
-                bullet.removeFromWorld();
-                getGameController().gotoGameMenu();
+        onCollision(EntityTypes.PLAYER, EntityTypes.PROJECTILE, (player, projectile) -> {
+            if(projectile.getComponent(Teams.class).side == 1){
+                spawn("explosion", new SpawnData(projectile.getCenter().subtract(8, 50)).put("entity", "missile"));
+                player.getComponent(Stats.class).health -= projectile.getComponent(Stats.class).damage;
+                projectile.removeFromWorld();
 
             }
         });
 
-        onCollision(Entities.PROJECTILE, Entities.PROJECTILE, (projectile1, projectile2) -> {
+        onCollision(EntityTypes.PROJECTILE, EntityTypes.PROJECTILE, (projectile1, projectile2) -> {
             if(projectile1.getComponent(Teams.class).side != projectile2.getComponent(Teams.class).side){
                 spawn("explosion", new SpawnData(projectile1.getCenter()).put("entity", "missile"));
                 play("explosion small.wav");
@@ -191,8 +191,6 @@ public class Game extends GameApplication {
 
             }
         });
-
-
     }
 
     @Override
@@ -200,26 +198,44 @@ public class Game extends GameApplication {
         Text score = new Text();
         score.setTranslateX(50);
         score.setTranslateY(100);
+        score.setStroke(Color.RED);
+        score.setFont(Font.font(20));
         score.textProperty().bind(FXGL.getWorldProperties().intProperty("score").asString().concat(" Points"));
 
+        finish.setTranslateX((getAppWidth()/3)+100);
+        finish.setTranslateY(getAppHeight()/2);
+        finish.setFont(Font.font(100));
+        finish.setStroke(Color.BLUE);
+        finish.setFill(Color.BLUE);
+        finish.setText("FINISH!");
+        finish.setVisible(false);
+
+        getGameScene().addUINode(finish);
         getGameScene().addUINode(score);
+
     }
-
-
     @Override
     protected void onUpdate(double tpf){
-        if(alive && !devMode){
+        if(alive){
             viewport.setY(increment);
             increment += camSpeed;
             player.translateY(camSpeed);
         }
-
+        if(viewport.getY() <= -500){
+            increment = 8000;
+            levelEnd();
+        }
+    }
+    private Text finish = new Text();
+    protected void levelEnd(){
+        finish.setVisible(true);
+        getGameTimer().runOnceAfter(() -> {
+            finish.setVisible(false);
+            startLevel();
+        }, Duration.seconds(3));
     }
 
-    protected void testBedMode(){
-        viewport.setY(6000);
-        spawn("missile", new SpawnData(800, 6000).put("side", Entities.ENEMY));
-        player.setY(6500);
+    protected void nextWave(){
 
     }
 

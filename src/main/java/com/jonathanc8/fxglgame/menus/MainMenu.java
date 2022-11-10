@@ -69,7 +69,7 @@ public class MainMenu extends FXGLMenu {
                 Bindings.when(shape3.pressedProperty()).then(Color.YELLOW).otherwise(Color.color(0.1, 0.05, 0.0, 0.75))
         );
 
-        shape3.setOnMouseClicked(e -> fireContinue());
+        shape3.setOnMouseClicked(e -> fireResume());
 
         shape3.setTranslateY(SIZE);
 

@@ -5,29 +5,26 @@ import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.component.Component;
-import com.jonathanc8.fxglgame.Entities;
-import javafx.geometry.Point2D;
+import com.jonathanc8.fxglgame.EntityTypes;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 public class HomingMissileComponent extends Component {
-    private Entities targetSide;
+    private EntityTypes targetSide;
     private Entity target;
     private Entity missile;
     private int speed;
     private int turnSpeed = 1;
     private double timeBomb = 0;
     private double targetAngle = 0;
-    public HomingMissileComponent(Entities side, int speed){
-        if(side == Entities.PLAYER){
-            targetSide = Entities.ENEMY;
+    public HomingMissileComponent(EntityTypes side, int speed){
+        if(side == EntityTypes.PLAYER){
+            targetSide = EntityTypes.ENEMY;
         }
 
-        if(side == Entities.ENEMY){
-            targetSide = Entities.PLAYER;
+        if(side == EntityTypes.ENEMY){
+            targetSide = EntityTypes.PLAYER;
         }
         missile = this.getEntity();
         this.speed = speed;

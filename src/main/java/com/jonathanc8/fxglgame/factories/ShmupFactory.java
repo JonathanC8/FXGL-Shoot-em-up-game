@@ -11,11 +11,9 @@ import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.AnimationChannel;
 import com.almasb.fxgl.texture.Texture;
-import com.jonathanc8.fxglgame.Entities;
-import com.jonathanc8.fxglgame.components.HomingMissileComponent;
-import com.jonathanc8.fxglgame.components.PlayerControl;
-import com.jonathanc8.fxglgame.components.ShootPlayer;
-import com.jonathanc8.fxglgame.components.Teams;
+import com.jonathanc8.fxglgame.EntityTypes;
+import com.jonathanc8.fxglgame.ItemTypes;
+import com.jonathanc8.fxglgame.components.*;
 import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
@@ -29,37 +27,55 @@ public class ShmupFactory implements EntityFactory {
     @Spawns("player")
     public Entity newPlayer(SpawnData data) {
         Color color = data.get("color");
-        Entity e = entityBuilder(data).type(Entities.PLAYER).viewWithBBox(texture("ship/sparrow.png")).at(800, 6450).collidable().build();
-        e.addComponent(new PlayerControl(e, 10));
+        Entity e = entityBuilder(data)
+                .type(EntityTypes.PLAYER)
+                .viewWithBBox(texture("ship/sparrow.png"))
+                .with(new Stats(10, 10, 8, EntityTypes.PLAYER))
+                .at(800, 6450)
+                .collidable()
+                .build();
+        e.addComponent(new PlayerControl(10));
         return e;
     }
 
     @Spawns("powerUp")
     public Entity newPowerUp(SpawnData data){
-        Entity e = entityBuilder().type(Entities.POWER_UP).viewWithBBox(new Rectangle(20, 20, Color.YELLOW)).collidable().build();
+        Entity e = entityBuilder(data)
+                .type(EntityTypes.POWER_UP)
+                .viewWithBBox(new Rectangle(20, 20, Color.YELLOW))
+                .collidable()
+                .build();
 
+        return e;
+    }
+
+    @Spawns("randomPowerUp")
+    public Entity newRandPowerUp(SpawnData data){
+        Entity e = newPowerUp(data);
+        e.addComponent(new PowerUpController());
+        return e;
+    }
+
+    @Spawns("missilePowerUp")
+    public Entity newMissilePowerUp(SpawnData data){
+        Entity e = newPowerUp(data);
+        e.addComponent(new PowerUpController("missile"));
         return e;
     }
 
     @Spawns("bullet")
     public Entity newBullet(SpawnData data){
         Point2D dir = data.get("dir");
-        int side = data.get("side");
-        int speed;
-        Texture texture;
-        if(side == 0){
-            texture = texture("projectile/blaster+.png");
-            speed = 1500;
-        } else {
-            texture = texture("projectile/javelin.png");
-            speed = 300;
-        }
-        Entity e = entityBuilder(data).type(Entities.PROJECTILE)
+        EntityTypes side = data.get("side");
+        int speed = ItemTypes.PLASMA_CANNON.speed;
+        Texture texture= texture("projectile/blaster+.png");;
+        Entity e = entityBuilder(data).type(EntityTypes.PROJECTILE)
                 .with(new ProjectileComponent( dir, speed ))
                 .rotate(90)
                 .with(new TimeComponent())
                 .with(new OffscreenCleanComponent())
                 .with(new Teams(side))
+                .with(new Stats(1, 1, speed, side))
                 .view(texture)
                 .bbox(BoundingShape.box(25, 50))
                 .collidable()
@@ -67,13 +83,14 @@ public class ShmupFactory implements EntityFactory {
         return e;
     }
 
-    @Spawns("missile")
-    public Entity newMissile(SpawnData data){
-        Entities side = data.get("side");
-        int speed = 4;
-        Entity missile = entityBuilder(data).type(Entities.PROJECTILE)
+    @Spawns("homingMissile")
+    public Entity newHomingMissile(SpawnData data){
+        EntityTypes side = data.get("side");
+        int speed = ItemTypes.MISSILE.speed;
+        Entity missile = entityBuilder(data).type(EntityTypes.PROJECTILE)
                 .with(new TimeComponent())
                 .with(new HomingMissileComponent(side, speed))
+                .with(new Stats(2, ItemTypes.MISSILE.damage, speed, side))
                 .with(new OffscreenCleanComponent())
                 .with(new Teams(side))
                 .viewWithBBox(texture("projectile/javelin.png"))
@@ -84,25 +101,24 @@ public class ShmupFactory implements EntityFactory {
         return missile;
     }
 
-    @Spawns("enemy")
-    public Entity newEnemy(SpawnData data){
-        Entity e = entityBuilder(data).type(Entities.ENEMY).viewWithBBox(texture("ship/hai water bug.png"))
-                .collidable()
-                .build();
-        e.addComponent(new ShootPlayer(e));
-        return e;
-    }
-
     @Spawns("alienTank")
     public Entity newAlienTank(SpawnData data){
-        Entity e = entityBuilder(data).type(Entities.ENEMY).viewWithBBox(new Rectangle(100, 100, Color.RED)).collidable().build();
+        Entity e = entityBuilder(data).type(EntityTypes.ENEMY).viewWithBBox(new Rectangle(100, 100, Color.RED)).collidable().build();
         e.addComponent(new ShootPlayer(e));
         return e;
     }
 
     @Spawns("alienGrunt")
     public Entity newAlienGrunt(SpawnData data){
-        return null;
+        Entity grunt = entityBuilder(data)
+                .type(EntityTypes.ENEMY)
+                .viewWithBBox(texture("ship/wasp.png"))
+                .with(new GruntController(4))
+                .with(new Stats(2, 3, 4,0, EntityTypes.ENEMY))
+                .collidable()
+                .build();
+
+        return grunt;
     }
 
     @Spawns("alienArtillery")
@@ -110,9 +126,15 @@ public class ShmupFactory implements EntityFactory {
         return null;
     }
 
-    @Spawns("alienAntiair")
+    @Spawns("alienAntiAir")
     public Entity newAlienAA(SpawnData data){
-        return null;
+        Entity e = entityBuilder(data).type(EntityTypes.ENEMY)
+                .with(new Stats(5, 3, 0, EntityTypes.ENEMY))
+                .viewWithBBox(texture("ship/hai water bug.png"))
+                .collidable()
+                .build();
+        e.addComponent(new ShootPlayer(e));
+        return e;
     }
 
     @Spawns("explosion")

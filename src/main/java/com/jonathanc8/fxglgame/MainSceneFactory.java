@@ -6,10 +6,6 @@ import com.almasb.fxgl.app.scene.SceneFactory;
 import com.jonathanc8.fxglgame.menus.MainMenu;
 
 public class MainSceneFactory extends SceneFactory {
-    @Override
-    public FXGLMenu newMainMenu(){
-        return new MainMenu(MenuType.MAIN_MENU);
-    }
 
     @Override
     public FXGLMenu newGameMenu(){

@@ -1,7 +1,7 @@
 package com.jonathanc8.fxglgame.components;
 
 import com.almasb.fxgl.entity.component.Component;
-import com.jonathanc8.fxglgame.Entities;
+import com.jonathanc8.fxglgame.EntityTypes;
 
 public class Teams extends Component {
     public int side;
@@ -9,8 +9,8 @@ public class Teams extends Component {
         this.side = side;
     }
 
-    public Teams(Entities side){
-        if(side == Entities.ENEMY){
+    public Teams(EntityTypes side){
+        if(side == EntityTypes.ENEMY){
             this.side = 1;
         }
     }
